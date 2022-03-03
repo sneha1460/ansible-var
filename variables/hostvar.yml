@@ -1,0 +1,13 @@
+---
+- name: to install
+  hosts: test
+  tasks:
+   - name: to install
+     apt:
+      name: "{{a}}"
+      state: "{{e}}"
+      update_cache: "{{g}}"
+...
+
+
+

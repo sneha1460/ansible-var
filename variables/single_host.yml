@@ -1,0 +1,11 @@
+---
+- name: to install
+  hosts: 172.31.83.39
+  tasks:
+   - name: to install
+     apt:
+      name: "{{a}}"
+      state: "{{e}}"
+      update_cache: "{{g}}"
+...
+

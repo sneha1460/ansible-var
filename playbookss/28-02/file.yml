@@ -1,0 +1,10 @@
+---
+- name: to create a file
+  hosts: all
+  tasks:
+   - name: to create file
+     file:
+      name: tyu.txt
+      state: touch
+      mode: 777
+...

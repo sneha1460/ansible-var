@@ -1,0 +1,14 @@
+---
+- name: to install httpd and to restart
+  hosts: all
+  tasks:
+   - name: to install httpd
+     apt:
+      name: httpd
+      state: present
+      update_cache: yes
+   - name: to restart
+     service:
+      name: httpd
+      state: restarted
+...

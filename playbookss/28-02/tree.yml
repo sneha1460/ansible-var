@@ -1,0 +1,14 @@
+---
+- name: to set repo and install tree using var
+  hosts: all
+  vars: 
+   a: tree
+  tasks:
+   - name: set repo
+     apt_repository:
+      repo: ppa:nginx/stable
+   - name: to install tree
+     apt:
+      name: " {{a}}"
+      state: present
+...

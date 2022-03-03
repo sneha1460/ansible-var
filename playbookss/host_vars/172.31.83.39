@@ -1,0 +1,11 @@
+---
+a: tree
+b: present
+c: absent
+d: yes
+e: no
+f: tomcat9
+g: git
+h: firewalld
+i: maven
+...

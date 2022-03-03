@@ -1,0 +1,25 @@
+---
+- name: to install using yum or apt
+  hosts: all
+  vars:
+   - a: tree
+   - b: present
+   - c: yes  
+  tasks:
+   - block:
+      - name: install using yum
+        yum:
+         name: "{{a}}"
+         state: "{{b}}"
+         update_cache: "{{c}}"
+     rescue:
+      - name: to install using apt
+        apt:
+         name: "{{a}}"
+         state: "{{b}}"
+         update_cache: "{{c}}"
+     always:
+      - name: to print msg
+        debug:
+         msg: installed successfully 
+...

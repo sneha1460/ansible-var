@@ -1,0 +1,10 @@
+---
+- name: to create file/dir
+  hosts: all
+  tasks: 
+   - name: to create file/dir
+     file:
+      name: "{{a}}"
+      state: "{{b}}"
+      path: "{{c}}"
+...

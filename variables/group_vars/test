@@ -1,0 +1,9 @@
+---
+a: tree
+b: git
+c: tomcat9
+d: nginx
+e: present
+f: absent
+g: yes
+h: no

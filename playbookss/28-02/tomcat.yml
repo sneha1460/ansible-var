@@ -1,0 +1,24 @@
+---
+- name: to install tomcat, replace,restart,url response
+  hosts: all
+  tasks:
+   - name: to install 
+     apt: 
+      name: tomcat9
+      state: present
+      update_cache: yes
+   - name: to replace
+     replace:
+      regexp: 7070
+      replace: 6060
+      dest: /etc/tomcat9/tomcat-user.xml
+   - name: to restart
+     service:
+      name: tomcat9
+      state: restarted
+   - name: url response
+     uri:
+      url: http://54.162.251.186:6060
+      status_code: 200
+...
+
